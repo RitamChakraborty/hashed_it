@@ -10,7 +10,7 @@
     </parent>
     <groupId>dev.ritam</groupId>
     <artifactId>hashed_it</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>v1.0.0-alpha</version>
     <name>hashed_it</name>
     <description>An api to get hashed output</description>
     <properties>
