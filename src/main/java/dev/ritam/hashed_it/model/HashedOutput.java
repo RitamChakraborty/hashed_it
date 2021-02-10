@@ -1,5 +1,7 @@
 package dev.ritam.hashed_it.model;
 
+import java.util.Objects;
+
 public class HashedOutput {
     private String input;
     private String output;
@@ -27,6 +29,21 @@ public class HashedOutput {
 
     public void setHashType(String hashType) {
         this.hashType = hashType;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof HashedOutput)) return false;
+        HashedOutput that = (HashedOutput) o;
+        return getInput().equals(that.getInput()) &&
+                getOutput().equals(that.getOutput()) &&
+                getHashType().equals(that.getHashType());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getInput(), getOutput(), getHashType());
     }
 
     @Override
