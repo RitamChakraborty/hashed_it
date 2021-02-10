@@ -1,4 +1,4 @@
-package dev.ritam.hashed_it;
+package dev.ritam.hashed_it.model;
 
 public class HashedOutput {
     private String input;
