@@ -2,7 +2,7 @@
 
 An api to get hashed output
 
-Making a get request to the url `/api/v1/md5?input=hashed-it` will generate ouput
+Making a get request to the url `/api/v1/md5?input=hashed-it` will generate an output
 
 ```json
 {
@@ -11,3 +11,5 @@ Making a get request to the url `/api/v1/md5?input=hashed-it` will generate oupu
   "hashType": "md5"
 }
 ``` 
+
+Check out the application [here](https://sleepy-dusk-40584.herokuapp.com/api/v1/md5?input=hashed-it);
