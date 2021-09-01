@@ -6,6 +6,9 @@ import org.springframework.stereotype.Service;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.security.Security;
+import java.util.Set;
+import java.util.TreeSet;
 
 @Service
 public class HashingService {
@@ -15,6 +18,10 @@ public class HashingService {
         BigInteger bigInteger = new BigInteger(1, bytes);
 
         return bigInteger.toString(16);
+    }
+
+    public Set<String> getAllHashTypes() {
+        return new TreeSet<>(Security.getAlgorithms("MessageDigest"));
     }
 
     public HashedOutput getHashedOutput(String hashType, String input) throws NoSuchAlgorithmException {

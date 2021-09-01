@@ -3,13 +3,29 @@ package dev.ritam.hashed_it.service;
 import dev.ritam.hashed_it.model.HashedOutput;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import java.security.NoSuchAlgorithmException;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@SpringBootTest
 class HashingServiceTest {
-    private final HashingService hashingService = new HashingService();
+    private HashingService hashingService;
+
+    @Autowired
+    public void setHashingService(HashingService hashingService) {
+        this.hashingService = hashingService;
+    }
+
+    @Test
+    void getAllHashTypes_test() {
+        Set<String> algorithms = hashingService.getAllHashTypes();
+        System.out.println(algorithms);
+        Assertions.assertTrue(algorithms.contains("MD5"));
+    }
 
     @Test
     void getHashedOutput_correct_input_test() throws NoSuchAlgorithmException {
