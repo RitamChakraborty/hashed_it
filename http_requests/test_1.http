@@ -1,0 +1,11 @@
+### md5 hash
+GET http://localhost:8080/api/v1/MD5?input=testj
+Accept: application/json
+
+### sha1 hash
+GET http://localhost:8080/api/v1/sha1?input=testj
+Accept: application/json
+
+### wrong hash
+GET http://localhost:8080/api/v1/sha256?input=testj
+Accept: application/json
