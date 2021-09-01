@@ -2,7 +2,7 @@ package dev.ritam.hashed_it.controller;
 
 import dev.ritam.hashed_it.model.HashedOutput;
 import dev.ritam.hashed_it.service.HashingService;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.security.NoSuchAlgorithmException;
@@ -10,11 +10,15 @@ import java.security.NoSuchAlgorithmException;
 @RestController
 @RequestMapping("/api/v1")
 public class V1Controller {
-    private HashingService hashingService;
+    private final HashingService hashingService;
 
-    @Autowired
-    public void setHashingService(HashingService hashingService) {
+    public V1Controller(HashingService hashingService) {
         this.hashingService = hashingService;
+    }
+
+    @GetMapping("/types")
+    public ResponseEntity<?> getAllHashTypes() {
+        return ResponseEntity.ok(hashingService.getAllHashTypes());
     }
 
     @GetMapping("/{hashType}")

@@ -9,3 +9,9 @@ Accept: application/json
 ### wrong hash
 GET http://localhost:8080/api/v1/sha256?input=testj
 Accept: application/json
+
+### all hash types
+GET http://localhost:8080/api/v1/types
+Accept: application/json
+
+
