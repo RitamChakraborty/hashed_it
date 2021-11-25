@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Document</title>
+</head>
+<body>
+<form action="/">
+    <label for="input">Enter something</label>
+    <textarea cols="30" id="input" name="input" required rows="10"></textarea>
+    <br>
+    <label for="hash-type">Select Hash Type</label>
+    <select id="hash-type" name="hash-type" required>
+        <option selected value="md5">MD5</option>
+        <option value="sha">SHA</option>
+    </select>
+    <input type="submit" value="Convert">
+</form>
+<label for="output">Converted Hash</label>
+<textarea cols="30" id="output" name="output" rows="10"></textarea>
+</body>
+</html>
