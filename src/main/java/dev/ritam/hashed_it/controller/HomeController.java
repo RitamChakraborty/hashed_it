@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 @Slf4j
@@ -34,5 +36,10 @@ public class HomeController {
         }
 
         return "index";
+    }
+
+    @ModelAttribute("hashTypes")
+    public List<String> hashTypes() {
+        return new ArrayList<>(hashingService.getAllHashTypes());
     }
 }

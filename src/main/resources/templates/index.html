@@ -14,12 +14,11 @@
     <br>
     <label for="hash-type">Select Hash Type</label>
     <select id="hash-type" name="hash-type" required th:field="*{hashType}">
-        <option selected value="md5">MD5</option>
-        <option value="sha">SHA</option>
+        <option th:each="hashType : ${hashTypes}" th:text="${hashType}" th:value="${hashType}"></option>
     </select>
     <input type="submit" value="Convert">
 </form>
 <label for="output">Converted Hash</label>
-<textarea cols="30" id="output" name="output" rows="10" th:text="*{output}"></textarea>
+<textarea cols="30" id="output" name="output" readonly rows="10" th:text="*{output}"></textarea>
 </body>
 </html>
