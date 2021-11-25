@@ -1,6 +1,7 @@
 package dev.ritam.hashed_it.service;
 
 import dev.ritam.hashed_it.exception.UnknownHashTypeException;
+import dev.ritam.hashed_it.model.ConversionRequest;
 import dev.ritam.hashed_it.model.HashedOutput;
 import org.springframework.stereotype.Service;
 
@@ -21,12 +22,16 @@ public class HashingService {
         return bigInteger.toString(16);
     }
 
+    public String getHashFromConversionRequest(ConversionRequest conversionRequest) throws NoSuchAlgorithmException {
+        return getHash(conversionRequest.getHashType(), conversionRequest.getInput());
+    }
+
     public Set<String> getAllHashTypes() {
         return new TreeSet<>(Security.getAlgorithms("MessageDigest"));
     }
 
     public HashedOutput getHashedOutput(String hashType, String input) {
-        String output = null;
+        String output;
 
         try {
             output = getHash(hashType, input);
