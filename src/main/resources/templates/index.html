@@ -5,20 +5,35 @@
     <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
           name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
-    <title>Document</title>
+    <title>Hashed It</title>
+    <link rel="icon" th:href="@{../static/favicon.ico}" type="image/ico">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
-<form method="post" th:action="@{/}" th:object="${conversionRequest}">
-    <label for="input">Enter something</label>
-    <textarea cols="30" id="input" name="input" required rows="10" th:field="*{input}"></textarea>
-    <br>
-    <label for="hash-type">Select Hash Type</label>
-    <select id="hash-type" name="hash-type" required th:field="*{hashType}">
-        <option th:each="hashType : ${hashTypes}" th:text="${hashType}" th:value="${hashType}"></option>
-    </select>
-    <input type="submit" value="Convert">
-</form>
-<label for="output">Converted Hash</label>
-<textarea cols="30" id="output" name="output" readonly rows="10" th:text="*{output}"></textarea>
+<header>
+    <h1>
+        Hashed It
+    </h1>
+    <h4>
+        Convert text to hash output
+    </h4>
+</header>
+<section>
+    <form method="post" th:action="@{/}" th:object="${conversionRequest}">
+        <label for="input">Input Text</label>
+        <textarea id="input" name="input" required th:field="*{input}"></textarea>
+        <div class="convert">
+            <select id="hash-type" name="hash-type" required th:field="*{hashType}">
+                <option th:each="hashType : ${hashTypes}" th:text="${hashType}" th:value="${hashType}"></option>
+            </select>
+            <input type="submit" value="Convert">
+        </div>
+    </form>
+    <label for="output">Output Text</label>
+    <textarea id="output" name="output" readonly th:text="*{output}"></textarea>
+</section>
 </body>
 </html>
