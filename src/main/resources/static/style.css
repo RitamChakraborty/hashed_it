@@ -44,6 +44,10 @@ input, select, textarea, label {
     display: block;
 }
 
+textarea {
+    resize: vertical;
+}
+
 .convert {
     display: flex;
     margin: 1rem 0;
@@ -86,7 +90,7 @@ textarea {
     padding: 1rem;
 }
 
-textarea:active, textarea:focus, select:active, select:focus {
+#input:active, #input:focus, select:active, select:focus {
     outline: none;
     border: 2px solid lightgray;
 }
