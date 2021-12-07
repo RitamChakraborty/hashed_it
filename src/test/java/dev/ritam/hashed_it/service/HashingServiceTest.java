@@ -1,5 +1,6 @@
 package dev.ritam.hashed_it.service;
 
+import dev.ritam.hashed_it.exception.UnknownHashTypeException;
 import dev.ritam.hashed_it.model.HashedOutput;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -42,7 +43,7 @@ class HashingServiceTest {
     @Test
     void getHashedOutput_incorrect_hashType_test() {
         Assertions.assertThrows(
-                NoSuchAlgorithmException.class,
+                UnknownHashTypeException.class,
                 () -> hashingService.getHashedOutput("md", "something")
         );
     }
