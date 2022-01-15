@@ -1,15 +1,57 @@
 # Hashed-It
 
-An api to get hashed output
+An FullStack *Spring Boot* application to generate hash output.
 
-Making a get request to the url `/api/v1/md5?input=hashed-it` will generate an output
+### UI
 
-```json
+Minimal frontend to see the application in action. Build with *Thymeleaf* and *CSS*.
+
+### Demo
+
+<p align="center">
+    <img src="assets/screenshots/desktop.png" alt="mobile" height="384" width="512" hspace="10" vspace="10">
+    <img src="assets/screenshots/mobile.png" alt="mobile" height="384" width="220" hspace="10" vspace="10">
+</p>
+
+Check out the application [here](https://hashed-it.herokuapp.com/);
+
+### API End Points
+
+> **All the types** <br>
+> https://hashed-it.herokuapp.com/api/v1/types
+
+``` json
+[
+    "MD2",
+    "MD5",
+    "SHA",
+    "SHA-224",
+    "SHA-256",
+    "SHA-384",
+    "SHA-512",
+    "SHA-512/224",
+    "SHA-512/256"
+]
+```
+
+> **MD5 Hash** <br>
+> https://hashed-it.herokuapp.com/api/v1/MD5?input=test
+
+``` json
 {
-  "input": "hashed-it",
-  "output": "99e1cd9d16f7a9cbb8a440422f8737ec",
-  "hashType": "md5"
+    "input": "test",
+    "output": "98f6bcd4621d373cade4e832627b4f6",
+    "hashType": "MD5"
 }
-``` 
+```
 
-Check out the application [here](https://sleepy-dusk-40584.herokuapp.com/api/v1/md5?input=hashed-it);
+> **SHA-256 Hash** <br
+> https://hashed-it.herokuapp.com/api/v1/sha-256?input=test
+
+``` json
+{
+    "input": "test",
+    "output": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08",
+    "hashType": "sha-256"
+}
+```
