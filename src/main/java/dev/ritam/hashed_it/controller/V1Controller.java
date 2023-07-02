@@ -5,6 +5,8 @@ import dev.ritam.hashed_it.service.HashingService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Set;
+
 @RestController
 @RequestMapping("/api/v1")
 public class V1Controller {
@@ -15,7 +17,7 @@ public class V1Controller {
     }
 
     @GetMapping("/types")
-    public ResponseEntity<?> getAllHashTypes() {
+    public ResponseEntity<Set<String>> getAllHashTypes() {
         return ResponseEntity.ok(hashingService.getAllHashTypes());
     }
 
