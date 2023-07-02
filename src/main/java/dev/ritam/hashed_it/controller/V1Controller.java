@@ -2,6 +2,7 @@ package dev.ritam.hashed_it.controller;
 
 import dev.ritam.hashed_it.model.HashedOutput;
 import dev.ritam.hashed_it.service.HashingService;
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,6 +10,7 @@ import java.util.Set;
 
 @RestController
 @RequestMapping("/api/v1")
+@RateLimiter(name = "RATE_LIMITER")
 public class V1Controller {
     private final HashingService hashingService;
 
