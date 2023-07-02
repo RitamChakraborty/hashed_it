@@ -2,11 +2,9 @@ package dev.ritam.hashed_it.controller;
 
 import dev.ritam.hashed_it.model.ConversionRequest;
 import dev.ritam.hashed_it.service.HashingService;
-import io.github.resilience4j.ratelimiter.RequestNotPermitted;
 import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
