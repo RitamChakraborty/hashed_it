@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate Limited</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        :root {
+            --max-width: 30rem;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        main {
+            max-width: min(var(--max-width), 100%);
+            margin: 0 auto;
+            height: 100vh;
+            height: 100svh;
+        }
+
+        section {
+            height: 100%;
+            gap: 2rem;
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+            align-items: end;
+        }
+
+        section > * {
+            padding-bottom: 2rem;
+        }
+
+        article {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            color: red;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            opacity: .7;
+        }
+
+        @media screen and (min-width: 48rem) {
+            :root {
+                --max-width: 48rem;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h3 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<main>
+    <section>
+        <article>
+            <h1>⚠️ You got a speeding ticket!</h1>
+            <h3>
+                <span>Go back to </span>
+                <a href="/">Home</a>
+            </h3>
+        </article>
+        <aside>
+            <img src="rate-limited.webp" alt="rate-limited">
+        </aside>
+    </section>
+</main>
+</body>
+
+</html>
