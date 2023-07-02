@@ -4,4 +4,4 @@
 ██   ██ ██   ██      ██ ██   ██ ██      ██   ██     ██    ██
 ██   ██ ██   ██ ███████ ██   ██ ███████ ██████      ██    ██
 
-Powered by Java ${java.version}, Spring Boot ${spring-boot.version}, and Spring Cloud ${spring-cloud.version}
+Powered by Java ${java.version}, Spring Boot ${spring-boot.version}
