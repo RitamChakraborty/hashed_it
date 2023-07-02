@@ -1,4 +1,4 @@
-package dev.ritam.hashed_it.controller;
+package dev.ritam.hashed_it.controller.ui;
 
 import dev.ritam.hashed_it.model.ConversionRequest;
 import dev.ritam.hashed_it.service.HashingService;
@@ -7,7 +7,9 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
@@ -16,7 +18,7 @@ import java.util.List;
 @Controller
 @Slf4j
 @RequiredArgsConstructor
-@RateLimiter(name = "RATE_LIMITER")
+@RateLimiter(name = "WEBSITE_RATE_LIMITER")
 public class HomeController {
     private final HashingService hashingService;
 

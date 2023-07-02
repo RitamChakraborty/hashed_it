@@ -1,4 +1,4 @@
-package dev.ritam.hashed_it.controller;
+package dev.ritam.hashed_it.controller.api;
 
 import dev.ritam.hashed_it.model.HashedOutput;
 import dev.ritam.hashed_it.service.HashingService;
@@ -10,7 +10,7 @@ import java.util.Set;
 
 @RestController
 @RequestMapping("/api/v1")
-@RateLimiter(name = "RATE_LIMITER")
+@RateLimiter(name = "API_RATE_LIMITER")
 public class V1Controller {
     private final HashingService hashingService;
 
