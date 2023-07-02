@@ -4,11 +4,19 @@ server:
 resilience4j:
   ratelimiter:
     instances:
-      RATE_LIMITER:
+      UI_RATE_LIMITER:
         allow-health-indicator-to-fail: true
         event-consumer-buffer-size: 50
-        limit-for-period: 30
-        limit-refresh-period: 60s
+        limit-for-period: 3
+        limit-refresh-period: 10s
+        register-health-indicator: true
+        subscribe-for-events: true
+        timeout-duration: 0s
+      API_RATE_LIMITER:
+        allow-health-indicator-to-fail: true
+        event-consumer-buffer-size: 50
+        limit-for-period: 5
+        limit-refresh-period: 10s
         register-health-indicator: true
         subscribe-for-events: true
         timeout-duration: 0s

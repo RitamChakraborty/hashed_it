@@ -18,7 +18,7 @@ import java.util.List;
 @Controller
 @Slf4j
 @RequiredArgsConstructor
-@RateLimiter(name = "WEBSITE_RATE_LIMITER")
+@RateLimiter(name = "UI_RATE_LIMITER")
 public class HomeController {
     private final HashingService hashingService;
 
