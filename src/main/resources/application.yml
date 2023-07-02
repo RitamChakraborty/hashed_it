@@ -7,8 +7,8 @@ resilience4j:
       RATE_LIMITER:
         allow-health-indicator-to-fail: true
         event-consumer-buffer-size: 50
-        limit-for-period: 5
-        limit-refresh-period: 5s
+        limit-for-period: 30
+        limit-refresh-period: 60s
         register-health-indicator: true
         subscribe-for-events: true
         timeout-duration: 0s
