@@ -2,7 +2,7 @@ spring:
   application:
     name: Hashed It
   profiles:
-    active: ${PROFILE:local}
+    active: ${PROFILE:prod}
 
 server:
   port: ${PORT:8080}
