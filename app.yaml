@@ -1,2 +1,4 @@
+runtime: java17
+
 env_variables:
   PROFILE: prod
