@@ -16,7 +16,8 @@ Minimal frontend to see the application in action. Build with *Thymeleaf* and *C
 ### API End Points
 
 > **All the types** <br>
-> /api/v1/types
+
+`/api/v1/types`
 
 ``` json
 [
@@ -32,8 +33,9 @@ Minimal frontend to see the application in action. Build with *Thymeleaf* and *C
 ]
 ```
 
-> **MD5 Hash** <br>
-> /api/v1/MD5?input=test
+> **MD5 Hash**
+
+`/api/v1/MD5?input=test`
 
 ``` json
 {
@@ -43,8 +45,9 @@ Minimal frontend to see the application in action. Build with *Thymeleaf* and *C
 }
 ```
 
-> **SHA-256 Hash** <br>
-> /api/v1/sha-256?input=test
+> **SHA-256 Hash**
+
+`/api/v1/sha-256?input=test`
 
 ``` json
 {
