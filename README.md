@@ -13,12 +13,10 @@ Minimal frontend to see the application in action. Build with *Thymeleaf* and *C
     <img src="assets/screenshots/mobile.png" alt="mobile" height="384" width="220" hspace="10" vspace="10">
 </p>
 
-Check out the application [here](https://hashed-it.herokuapp.com/);
-
 ### API End Points
 
 > **All the types** <br>
-> https://hashed-it.herokuapp.com/api/v1/types
+> /api/v1/types
 
 ``` json
 [
@@ -35,7 +33,7 @@ Check out the application [here](https://hashed-it.herokuapp.com/);
 ```
 
 > **MD5 Hash** <br>
-> https://hashed-it.herokuapp.com/api/v1/MD5?input=test
+> /api/v1/MD5?input=test
 
 ``` json
 {
@@ -45,8 +43,8 @@ Check out the application [here](https://hashed-it.herokuapp.com/);
 }
 ```
 
-> **SHA-256 Hash** <br
-> https://hashed-it.herokuapp.com/api/v1/sha-256?input=test
+> **SHA-256 Hash** <br>
+> /api/v1/sha-256?input=test
 
 ``` json
 {
